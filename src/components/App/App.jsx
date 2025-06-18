@@ -7,11 +7,11 @@ const App = () => {
 	const [data, setData] = useState([])
 	const [filter, setFilter] = useState('all')
 
-	// useEffect(() => {
-	// 	fetch('https://dummyjson.com/todos')
-	// 		.then(res => res.json())
-	// 		.then(data => setData(data.todos))
-	// }, [])
+	useEffect(() => {
+		fetch('https://dummyjson.com/todos')
+			.then(res => res.json())
+			.then(data => setData(data.todos))
+	}, [])
 
 	const handleAddTodo = text => {
 		const newTodo = {
